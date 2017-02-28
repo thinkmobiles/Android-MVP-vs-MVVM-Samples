@@ -8,10 +8,6 @@ import android.widget.TextView;
 import com.thinkmobiles.android.samples.domain.models.CheckIn;
 import com.thinkmobiles.android.samples.mvp.R;
 
-/**
- * Created by Lynx on 2/28/2017.
- */
-
 public class CheckInVH extends RecyclerView.ViewHolder {
 
     private TextView tvMsg_LICI;

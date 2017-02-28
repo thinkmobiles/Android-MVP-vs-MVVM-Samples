@@ -1,8 +1,5 @@
 package com.thinkmobiles.android.samples.mvp.utils;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
 
 public abstract class Constants {
 

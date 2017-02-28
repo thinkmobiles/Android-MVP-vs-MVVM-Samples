@@ -21,10 +21,6 @@ import com.thinkmobiles.android.samples.mvp.screens.NavigationActivity;
 import java.util.ArrayList;
 import java.util.List;
 
-/**
- * Created by Lynx on 2/28/2017.
- */
-
 public class CheckInsFragment extends BaseFragment<NavigationActivity> implements CheckInsContract.CheckInsView {
 
     private CheckInsContract.CheckInsPresenter presenter;

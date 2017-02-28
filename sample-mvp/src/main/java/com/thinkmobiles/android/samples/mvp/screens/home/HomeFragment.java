@@ -17,10 +17,6 @@ import com.thinkmobiles.android.samples.mvp.base.BaseFragment;
 import com.thinkmobiles.android.samples.mvp.screens.NavigationActivity;
 import com.thinkmobiles.android.samples.mvp.utils.Constants;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
-
 public class HomeFragment extends BaseFragment<NavigationActivity> implements HomeContract.HomeView {
 
     private HomeContract.HomePresenter presenter;

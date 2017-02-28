@@ -4,10 +4,6 @@ import com.thinkmobiles.android.samples.mvp.base.BasePresenter;
 import com.thinkmobiles.android.samples.mvp.base.BaseView;
 import com.thinkmobiles.android.samples.mvp.utils.Constants;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
-
 public interface AuthContract {
     interface AuthView extends BaseView<AuthPresenter> {
         String getEmail();

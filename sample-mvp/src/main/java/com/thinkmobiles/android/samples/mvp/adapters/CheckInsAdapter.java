@@ -9,10 +9,6 @@ import com.thinkmobiles.android.samples.mvp.R;
 
 import java.util.ArrayList;
 
-/**
- * Created by Lynx on 2/28/2017.
- */
-
 public class CheckInsAdapter extends RecyclerView.Adapter<CheckInVH> {
 
     private ArrayList<CheckIn> data = new ArrayList<>();

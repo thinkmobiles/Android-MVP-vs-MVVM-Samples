@@ -7,10 +7,6 @@ import com.thinkmobiles.android.samples.mvp.utils.Constants;
 
 import java.util.ArrayList;
 
-/**
- * Created by Lynx on 2/28/2017.
- */
-
 public class CheckInsPresenter implements CheckInsContract.CheckInsPresenter {
 
     private CheckInsContract.CheckInsView view;

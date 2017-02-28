@@ -10,10 +10,6 @@ import android.widget.Toast;
 
 import com.thinkmobiles.android.samples.mvp.screens.NavigationActivity;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
-
 public abstract class BaseFragment<T extends NavigationActivity> extends Fragment {
 
     protected T mActivity;

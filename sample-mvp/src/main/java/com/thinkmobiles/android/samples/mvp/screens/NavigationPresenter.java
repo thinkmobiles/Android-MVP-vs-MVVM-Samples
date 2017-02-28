@@ -4,10 +4,6 @@ import android.text.TextUtils;
 
 import com.thinkmobiles.android.samples.domain.modules.IAuthModule;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
-
 public class NavigationPresenter implements NavigationContract.NavigationPresenter {
 
     private NavigationContract.NavigationView view;

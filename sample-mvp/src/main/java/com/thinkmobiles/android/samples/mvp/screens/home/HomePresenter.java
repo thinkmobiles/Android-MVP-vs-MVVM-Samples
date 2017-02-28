@@ -7,10 +7,6 @@ import com.thinkmobiles.android.samples.domain.modules.IAuthModule;
 import com.thinkmobiles.android.samples.domain.modules.ICheckInModule;
 import com.thinkmobiles.android.samples.mvp.utils.Constants;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
-
 public class HomePresenter implements HomeContract.HomePresenter {
 
     private HomeContract.HomeView view;

@@ -6,10 +6,6 @@ import com.thinkmobiles.android.samples.mvp.base.BaseView;
 
 import java.util.List;
 
-/**
- * Created by Lynx on 2/28/2017.
- */
-
 public interface CheckInsContract {
     interface CheckInsView extends BaseView<CheckInsPresenter> {
         void displayCheckIns(List<CheckIn> checkIns);

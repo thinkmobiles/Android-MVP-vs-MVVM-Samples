@@ -15,10 +15,6 @@ import com.thinkmobiles.android.samples.mvp.R;
 import com.thinkmobiles.android.samples.mvp.base.BaseFragment;
 import com.thinkmobiles.android.samples.mvp.utils.Constants;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
-
 public class AuthFragment extends BaseFragment<NavigationActivity> implements AuthContract.AuthView {
 
     private AuthContract.AuthPresenter presenter;

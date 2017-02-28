@@ -6,10 +6,6 @@ import com.thinkmobiles.android.samples.domain.models.Credential;
 import com.thinkmobiles.android.samples.domain.modules.IAuthModule;
 import com.thinkmobiles.android.samples.mvp.utils.Constants;
 
-/**
- * Created by Lynx on 2/27/2017.
- */
-
 public class AuthPresenter implements AuthContract.AuthPresenter {
 
     private AuthContract.AuthView view;
