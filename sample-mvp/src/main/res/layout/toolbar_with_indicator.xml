@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="?android:attr/actionBarSize">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar_TWI"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+            app:titleTextColor="@android:color/white"/>
+
+        <ImageView
+            android:id="@+id/ivOnlineIndicator_TWI"
+            android:src="@drawable/shape_round_red"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_margin="16dp"
+            android:layout_gravity="center_vertical|end"/>
+
+
+    </FrameLayout>
+
+</android.support.design.widget.AppBarLayout>

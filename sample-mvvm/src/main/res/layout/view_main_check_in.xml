@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="helper"
+            type="com.thinkmobiles.android.samples.mvvm.presentation.check_in.ViewHelper" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/background_light">
+
+        <LinearLayout
+            android:id="@+id/llButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:background="@drawable/shape_stroke"
+            android:orientation="horizontal"
+            android:padding="4dp">
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_square_btn"
+                android:onClick="@{helper.clickFetchAllCheckIns}"
+                android:padding="8dp"
+                android:text="Get All CheckIns" />
+
+            <android.support.v4.widget.Space
+                android:layout_width="4dp"
+                android:layout_height="match_parent" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_square_btn"
+                android:onClick="@{helper.clickFetchMyCheckIns}"
+                android:padding="8dp"
+                android:text="Get My CheckIns" />
+
+        </LinearLayout>
+
+        <TextView xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/tvTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/llButtons"
+            android:gravity="center_horizontal"
+            android:hint="Load CheckIns"
+            android:text="@{helper.title}"
+            tools:text="title" />
+
+        <android.support.v4.widget.SwipeRefreshLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/tvTitle"
+            android:layout_margin="4dp"
+            bind:setOnRefreshListener="@{helper.refreshListener}"
+            bind:setRefreshing="@{helper.isRefreshing}">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                bind:adapter="@{helper.adapter}"
+                bind:setLayoutManager="@{helper.layoutManager}" />
+
+
+        </android.support.v4.widget.SwipeRefreshLayout>
+
+    </RelativeLayout>
+
+</layout>

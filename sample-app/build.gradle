@@ -1,0 +1,86 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+    defaultConfig {
+        applicationId "com.thinkmobiles.android.samples"
+        minSdkVersion 21
+        targetSdkVersion 25
+
+        versionCode 1
+        versionName "1.0"
+
+        testFunctionalTest false
+        testHandleProfiling false
+        testInstrumentationRunner "android.app.Instrumentation"
+
+        jackOptions {
+            enabled false
+            jackInProcess false
+        }
+    }
+    signingConfigs {
+        sc_debug {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('debug.keystore')
+            storePassword 'android'
+        }
+
+        //TODO: add release signingConfig
+    }
+    buildTypes {
+        debug {
+            signingConfig signingConfigs.sc_debug
+            // applicationIdSuffix '.debug'
+            debuggable true
+            useProguard false
+            minifyEnabled false
+        }
+        release {
+            signingConfig signingConfigs.sc_debug
+            // applicationIdSuffix '.release'
+            debuggable false
+            useProguard true
+            minifyEnabled true
+            proguardFile getDefaultProguardFile('proguard-android.txt')
+            proguardFile 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        incremental true
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    dataBinding {
+        enabled true
+        version '2.2.3'
+        addDefaultAdapters true
+    }
+
+    lintOptions {
+        disable 'GoogleAppIndexingWarning'
+        return void
+    }
+
+    dexOptions {
+        dexInProcess false
+    }
+}
+dependencies {
+    compile('com.android.support:appcompat-v7:25.2.0') {
+        transitive true
+        exclude(group: 'com.android.support', module: 'animated-vector-drawable')
+    }
+    compile project(':sample-mvp')
+    compile project(':sample-mvvm')
+
+    compile 'com.google.firebase:firebase-core:10.2.0'
+    compile 'com.google.firebase:firebase-auth:10.2.0'
+    compile 'com.google.firebase:firebase-database:10.2.0'
+}
+
+
+apply plugin: 'com.google.gms.google-services'

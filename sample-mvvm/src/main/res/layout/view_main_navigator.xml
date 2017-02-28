@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:bind="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="helper"
+            type="com.thinkmobiles.android.samples.mvvm.presentation.navigator.ViewHelper" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbarMain"
+            android:background="@android:color/holo_blue_light"
+            android:layout_width="match_parent"
+            android:layout_height="?android:attr/actionBarSize"
+            android:title="@{helper.title}"
+            bind:titleTextColor="@android:color/primary_text_dark">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right">
+
+                <ImageView
+                    android:layout_margin="16dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@{helper.isOnline ? @drawable/shape_round_green : @drawable/shape_round_red}"
+                    tools:src="@drawable/shape_round_green"
+                    android:layout_width="8dp"
+                    android:layout_height="8dp" />
+
+            </LinearLayout>
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <FrameLayout
+            android:layout_below="@id/toolbarMain"
+            android:id="@+id/flFragmentContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+</layout>

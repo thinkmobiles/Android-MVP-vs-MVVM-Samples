@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="24dp"
+        android:background="@drawable/bg_round_rectangle"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/tvEmail_FH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-condensed"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp"
+            tools:text="test@test.test" />
+
+        <TextView
+            android:id="@+id/tvUID_FH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            tools:text="#$sdf#$@$QqDWE!@#F#$RGDRHG#G#@F" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="42dp"
+        android:fontFamily="monospace"
+        android:gravity="center"
+        android:text="Please, left some check in message for is."
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilMessage_FH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp">
+
+        <EditText
+            android:id="@+id/etMessage_FH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="24dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center"
+            android:hint="Enter your message" />
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/btnBrowse_FH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Browse"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
+
+        <TextView
+            android:id="@+id/btnPost_FH"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="4dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:padding="8dp"
+            android:text="Post"
+            android:textAllCaps="true"
+            android:textColor="@android:color/white" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/btnSignOut_FH"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/bg_button"
+        android:gravity="center"
+        android:padding="8dp"
+        android:text="Sign out"
+        android:textAllCaps="true"
+        android:textColor="@android:color/white" />
+
+</LinearLayout>

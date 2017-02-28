@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <variable
+            name="viewHolder"
+            type="com.thinkmobiles.android.samples.mvvm.presentation.check_in.ViewHelper.CheckInViewHolder" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:background="@drawable/shape_stroke_rounded"
+        android:orientation="vertical"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:paddingLeft="4dp"
+            android:text="@{viewHolder.checkInObservableField.checkInMessage}"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="message" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@null"
+            android:paddingRight="4dp"
+            android:text="@{viewHolder.checkInDate}"
+            android:textSize="12sp"
+            tools:text="date" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@null"
+            android:paddingRight="4dp"
+            android:text="@{viewHolder.checkInObservableField.email}"
+            android:textSize="12sp"
+            tools:text="owner" />
+
+    </LinearLayout>
+
+</layout>

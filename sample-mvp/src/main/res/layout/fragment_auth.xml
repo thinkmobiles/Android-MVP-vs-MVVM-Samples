@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_android_black_24dp"/>
+
+    </FrameLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilEmail_FA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Login">
+
+        <EditText
+            android:id="@+id/etEmail_FA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="gonzo@gg.wp"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <android.support.design.widget.TextInputLayout
+        android:id="@+id/tilPassword_FA"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Password"
+        app:passwordToggleEnabled="true">
+
+        <EditText
+            android:id="@+id/etPassword_FA"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:text="12345678"/>
+
+    </android.support.design.widget.TextInputLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="16dp">
+
+        <TextView
+            android:id="@+id/btnSignUp_FA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign Up"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/btnSignIn_FA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign In"
+            android:textColor="@android:color/white"
+            android:background="@drawable/bg_button"
+            android:gravity="center"
+            android:padding="8dp"
+            android:layout_margin="4dp"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+</LinearLayout>

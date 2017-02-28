@@ -1,0 +1,47 @@
+apply plugin: 'com.android.library'
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        minSdkVersion 21
+        targetSdkVersion 25
+
+        versionCode 1
+        versionName "1.0"
+
+        testFunctionalTest false
+        testHandleProfiling false
+        testInstrumentationRunner "android.app.Instrumentation"
+
+        jackOptions {
+            enabled false
+            jackInProcess false
+        }
+    }
+    compileOptions {
+        incremental true
+        sourceCompatibility JavaVersion.VERSION_1_7
+        targetCompatibility JavaVersion.VERSION_1_7
+    }
+
+    dataBinding {
+        enabled true
+        version '2.2.3'
+        addDefaultAdapters true
+    }
+
+}
+
+dependencies {
+    compile('com.android.support:appcompat-v7:25.2.0') {
+        transitive true
+        exclude(group: 'com.android.support', module: 'animated-vector-drawable')
+    }
+
+    compile(group: 'com.android.support', name: 'recyclerview-v7', version: '25.2.0') {
+        transitive false
+    }
+    compile project(':domain')
+    compile project(path: ':domain')
+}
